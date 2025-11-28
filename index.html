@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Sweet Lab Menu</title>
+<style>
+  body { 
+    font-family: sans-serif; 
+    text-align: center; 
+    background: #fffafc; 
+    margin: 0;
+    padding: 0;
+  }
+
+  h1 { 
+    margin-top: 20px; 
+    font-size: 28px;
+  }
+
+  .lang-switch { 
+    margin: 20px 0; 
+  }
+
+  .lang-switch button {
+    margin: 0 5px;
+    padding: 10px 18px;
+    border-radius: 999px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    background: white;
+    font-size: 16px;
+  }
+
+  .lang-switch button.active {
+    font-weight: bold;
+    border-color: #ff7fbf;
+    color: #ff7fbf;
+  }
+
+  .menu-lang { 
+    display: none; 
+  }
+
+  .menu-lang.active { 
+    display: block; 
+  }
+
+  img { 
+    max-width: 90%; 
+    height: auto; 
+    margin-bottom: 16px; 
+    border-radius: 8px;
+  }
+</style>
+</head>
+<body>
+
+<h1>Sweet Lab Menu</h1>
+
+<div class="lang-switch">
+  <button data-lang="ka" class="active">ქართული</button>
+  <button data-lang="en">English</button>
+</div>
+
+<!-- GEORGIAN MENUS -->
+<div class="menu-lang lang-ka active">
+  <img src="images/ge/menu-1-ge.jpg" alt="Georgian Menu 1">
+  <img src="images/ge/menu-2-ge.jpg" alt="Georgian Menu 2">
+  <img src="images/ge/menu-3-ge.jpg" alt="Georgian Menu 3">
+  <img src="images/ge/menu-4-ge.jpg" alt="Georgian Menu 4">
+  <img src="images/ge/menu-5-ge.jpg" alt="Georgian Menu 5">
+</div>
+
+<!-- ENGLISH MENUS -->
+<div class="menu-lang lang-en">
+  <img src="images/en/menu-1-en.jpg" alt="English Menu 1">
+  <img src="images/en/menu-2-en.jpg" alt="English Menu 2">
+  <img src="images/en/menu-3-en.jpg" alt="English Menu 3">
+  <img src="images/en/menu-4-en.jpg" alt="English Menu 4">
+  <img src="images/en/menu-5-en.jpg" alt="English Menu 5">
+</div>
+
+<script>
+  const buttons = document.querySelectorAll('.lang-switch button');
+  const sections = document.querySelectorAll('.menu-lang');
+
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const lang = btn.getAttribute('data-lang');
+
+      // Switch button styles
+      buttons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      // Switch menu sections
+      sections.forEach(sec => {
+        sec.classList.remove('active');
+        if (sec.classList.contains('lang-' + lang)) {
+          sec.classList.add('active');
+        }
+      });
+    });
+  });
+</script>
+
+</body>
+</html>
