@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Sweet Lab Menu</title>
+
 <style>
   body { 
     font-family: sans-serif; 
@@ -45,7 +46,34 @@
     display: block; 
   }
 
-  img { 
+  /* Wolt logo */
+  .wolt-wrap {
+    display: flex;
+    justify-content: center;
+    margin: 8px 0 18px;
+  }
+
+  .wolt-wrap a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    border-radius: 14px;
+    background: #ffffff;
+    border: 1px solid #eee;
+    text-decoration: none;
+  }
+
+  .wolt-wrap img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    display: block;
+  }
+
+  /* Menu images */
+  .menu-img { 
     max-width: 90%; 
     height: auto; 
     margin-bottom: 16px; 
@@ -53,9 +81,17 @@
   }
 </style>
 </head>
+
 <body>
 
 <h1>Sweet Lab Menu</h1>
+
+<div class="wolt-wrap">
+  <a href="https://wolt.com/en/geo/tbilisi/restaurant/sweet-labb?srsltid=AfmBOooZsP3KjfWOflKC5pnJQQSQPeLiPXeqpCekDwm6WeWer6Meib1B"
+     target="_blank" rel="noopener">
+    <img src="images/logos/wolt.png" alt="Order on Wolt">
+  </a>
+</div>
 
 <div class="lang-switch">
   <button data-lang="ka" class="active">ქართული</button>
@@ -64,22 +100,22 @@
 
 <!-- GEORGIAN MENUS -->
 <div class="menu-lang lang-ka active">
-  <img src="images/ge/menu-1-ge.jpg" alt="Georgian Menu 1">
-  <img src="images/ge/menu-2-ge.jpg" alt="Georgian Menu 2">
-  <img src="images/ge/menu-3-ge.jpg" alt="Georgian Menu 3">
-  <img src="images/ge/menu-4-ge.jpg" alt="Georgian Menu 4">
-  <img src="images/ge/menu-5-ge.jpg" alt="Georgian Menu 5">
-  <img src="images/ge/menu-6-ge.jpg" alt="Georgian Menu 6">
+  <img class="menu-img" src="images/ge/menu-1-ge.jpg" alt="Georgian Menu 1">
+  <img class="menu-img" src="images/ge/menu-2-ge.jpg" alt="Georgian Menu 2">
+  <img class="menu-img" src="images/ge/menu-3-ge.jpg" alt="Georgian Menu 3">
+  <img class="menu-img" src="images/ge/menu-4-ge.jpg" alt="Georgian Menu 4">
+  <img class="menu-img" src="images/ge/menu-5-ge.jpg" alt="Georgian Menu 5">
+  <img class="menu-img" src="images/ge/menu-6-ge.jpg" alt="Georgian Menu 6">
 </div>
 
 <!-- ENGLISH MENUS -->
 <div class="menu-lang lang-en">
-  <img src="images/en/menu-1-en.jpg" alt="English Menu 1">
-  <img src="images/en/menu-2-en.jpg" alt="English Menu 2">
-  <img src="images/en/menu-3-en.jpg" alt="English Menu 3">
-  <img src="images/en/menu-4-en.jpg" alt="English Menu 4">
-  <img src="images/en/menu-5-en.jpg" alt="English Menu 5">
-  <img src="images/en/menu-6-en.jpg" alt="English Menu 6">
+  <img class="menu-img" src="images/en/menu-1-en.jpg" alt="English Menu 1">
+  <img class="menu-img" src="images/en/menu-2-en.jpg" alt="English Menu 2">
+  <img class="menu-img" src="images/en/menu-3-en.jpg" alt="English Menu 3">
+  <img class="menu-img" src="images/en/menu-4-en.jpg" alt="English Menu 4">
+  <img class="menu-img" src="images/en/menu-5-en.jpg" alt="English Menu 5">
+  <img class="menu-img" src="images/en/menu-6-en.jpg" alt="English Menu 6">
 </div>
 
 <script>
@@ -90,11 +126,9 @@
     btn.addEventListener('click', () => {
       const lang = btn.getAttribute('data-lang');
 
-      // Switch button styles
       buttons.forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
 
-      // Switch menu sections
       sections.forEach(sec => {
         sec.classList.remove('active');
         if (sec.classList.contains('lang-' + lang)) {
