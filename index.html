@@ -5,7 +5,7 @@
 <title>Sweet Lab Menu</title>
 
 <!-- Poppins font -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">
 
 <style>
   body { 
@@ -16,57 +16,29 @@
     padding: 0;
   }
 
+  /* ORDER CTA */
   .order-caption {
-    font-size: 20px;
-    font-weight: 600;
+    font-size: 22px;
+    font-weight: 700;
     color: #4a2f23;
     margin-top: 20px;
-    margin-bottom: 10px;
+    margin-bottom: 14px;
   }
 
-  .lang-switch { 
-    margin: 20px 0; 
-  }
-
-  .lang-switch button {
-    margin: 0 5px;
-    padding: 10px 18px;
-    border-radius: 999px;
-    border: 1px solid #ccc;
-    cursor: pointer;
-    background: white;
-    font-size: 16px;
-    font-family: 'Poppins', sans-serif;
-  }
-
-  .lang-switch button.active {
-    font-weight: 600;
-    border-color: #ff7fbf;
-    color: #ff7fbf;
-  }
-
-  .menu-lang { 
-    display: none; 
-  }
-
-  .menu-lang.active { 
-    display: block; 
-  }
-
-  /* Delivery logos */
+  /* DELIVERY LOGOS (desktop default) */
   .delivery-wrap {
     display: flex;
     justify-content: center;
     gap: 14px;
-    margin: 0 0 20px;
+    margin-bottom: 22px;
   }
 
   .delivery-wrap a {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 68px;
-    height: 68px;
+    width: 72px;
+    height: 72px;
     border-radius: 18px;
     background: #ffffff;
     border: 1px solid #eee;
@@ -80,40 +52,94 @@
   }
 
   .delivery-wrap img {
-    width: 40px;
-    height: 40px;
+    width: 44px;
+    height: 44px;
     object-fit: contain;
     display: block;
   }
 
-  /* Menu images */
+  /* LANGUAGE SWITCH */
+  .lang-switch { 
+    margin: 20px 0; 
+  }
+
+  .lang-switch button {
+    margin: 0 6px;
+    padding: 10px 18px;
+    border-radius: 999px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    background: white;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+  }
+
+  .lang-switch button.active {
+    font-weight: 700;
+    border-color: #ff7fbf;
+    color: #ff7fbf;
+  }
+
+  .menu-lang { 
+    display: none; 
+  }
+
+  .menu-lang.active { 
+    display: block; 
+  }
+
   .menu-img { 
     max-width: 90%; 
     height: auto; 
     margin-bottom: 16px; 
     border-radius: 8px;
   }
+
+  /* MOBILE BOOST */
+  @media (max-width: 768px) {
+
+    .order-caption {
+      font-size: 36px;
+      margin-top: 28px;
+      margin-bottom: 20px;
+    }
+
+    .delivery-wrap {
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+
+    .delivery-wrap a {
+      width: 120px;
+      height: 120px;
+      border-radius: 28px;
+    }
+
+    .delivery-wrap img {
+      width: 72px;
+      height: 72px;
+    }
+  }
 </style>
 </head>
 
 <body>
 
-<div class="order-caption">Order now!</div>
+<!-- LANGUAGE-AWARE ORDER CTA -->
+<div class="order-caption" id="orderCaption">შეუკვეთე ახლავე!</div>
 
 <div class="delivery-wrap">
-  <!-- Wolt -->
   <a href="https://wolt.com/en/geo/tbilisi/restaurant/sweet-labb?srsltid=AfmBOooZsP3KjfWOflKC5pnJQQSQPeLiPXeqpCekDwm6WeWer6Meib1B"
      target="_blank" rel="noopener">
     <img src="images/logos/wolt.png" alt="Order on Wolt">
   </a>
 
-  <!-- Glovo -->
   <a href="https://glovoapp.com/en/ge/tbilisi/stores/sweet-lab-tbi"
      target="_blank" rel="noopener">
     <img src="images/logos/glovo.png" alt="Order on Glovo">
   </a>
 
-  <!-- Bolt Food -->
   <a href="https://food.bolt.eu/en/15-tbilisi/p/125688-sweet-lab/"
      target="_blank" rel="noopener">
     <img src="images/logos/bolt.png" alt="Order on Bolt Food">
@@ -127,27 +153,28 @@
 
 <!-- GEORGIAN MENUS -->
 <div class="menu-lang lang-ka active">
-  <img class="menu-img" src="images/ge/menu-1-ge.jpg" alt="Georgian Menu 1">
-  <img class="menu-img" src="images/ge/menu-2-ge.jpg" alt="Georgian Menu 2">
-  <img class="menu-img" src="images/ge/menu-3-ge.jpg" alt="Georgian Menu 3">
-  <img class="menu-img" src="images/ge/menu-4-ge.jpg" alt="Georgian Menu 4">
-  <img class="menu-img" src="images/ge/menu-5-ge.jpg" alt="Georgian Menu 5">
-  <img class="menu-img" src="images/ge/menu-6-ge.jpg" alt="Georgian Menu 6">
+  <img class="menu-img" src="images/ge/menu-1-ge.jpg">
+  <img class="menu-img" src="images/ge/menu-2-ge.jpg">
+  <img class="menu-img" src="images/ge/menu-3-ge.jpg">
+  <img class="menu-img" src="images/ge/menu-4-ge.jpg">
+  <img class="menu-img" src="images/ge/menu-5-ge.jpg">
+  <img class="menu-img" src="images/ge/menu-6-ge.jpg">
 </div>
 
 <!-- ENGLISH MENUS -->
 <div class="menu-lang lang-en">
-  <img class="menu-img" src="images/en/menu-1-en.jpg" alt="English Menu 1">
-  <img class="menu-img" src="images/en/menu-2-en.jpg" alt="English Menu 2">
-  <img class="menu-img" src="images/en/menu-3-en.jpg" alt="English Menu 3">
-  <img class="menu-img" src="images/en/menu-4-en.jpg" alt="English Menu 4">
-  <img class="menu-img" src="images/en/menu-5-en.jpg" alt="English Menu 5">
-  <img class="menu-img" src="images/en/menu-6-en.jpg" alt="English Menu 6">
+  <img class="menu-img" src="images/en/menu-1-en.jpg">
+  <img class="menu-img" src="images/en/menu-2-en.jpg">
+  <img class="menu-img" src="images/en/menu-3-en.jpg">
+  <img class="menu-img" src="images/en/menu-4-en.jpg">
+  <img class="menu-img" src="images/en/menu-5-en.jpg">
+  <img class="menu-img" src="images/en/menu-6-en.jpg">
 </div>
 
 <script>
   const buttons = document.querySelectorAll('.lang-switch button');
   const sections = document.querySelectorAll('.menu-lang');
+  const orderCaption = document.getElementById('orderCaption');
 
   buttons.forEach(btn => {
     btn.addEventListener('click', () => {
@@ -162,6 +189,10 @@
           sec.classList.add('active');
         }
       });
+
+      // Update CTA text
+      orderCaption.textContent =
+        lang === 'ka' ? 'შეუკვეთე ახლავე!' : 'Order now!';
     });
   });
 </script>
