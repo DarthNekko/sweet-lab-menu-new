@@ -18,6 +18,13 @@
     font-size: 28px;
   }
 
+  .order-caption {
+    font-size: 14px;
+    color: #666;
+    margin-top: 6px;
+    margin-bottom: 6px;
+  }
+
   .lang-switch { 
     margin: 20px 0; 
   }
@@ -46,14 +53,15 @@
     display: block; 
   }
 
-  /* Wolt logo */
-  .wolt-wrap {
+  /* Delivery logos */
+  .delivery-wrap {
     display: flex;
     justify-content: center;
-    margin: 8px 0 18px;
+    gap: 12px;
+    margin: 0 0 18px;
   }
 
-  .wolt-wrap a {
+  .delivery-wrap a {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -63,9 +71,15 @@
     background: #ffffff;
     border: 1px solid #eee;
     text-decoration: none;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
   }
 
-  .wolt-wrap img {
+  .delivery-wrap a:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  }
+
+  .delivery-wrap img {
     width: 32px;
     height: 32px;
     object-fit: contain;
@@ -86,10 +100,25 @@
 
 <h1>Sweet Lab Menu</h1>
 
-<div class="wolt-wrap">
+<div class="order-caption">Order now</div>
+
+<div class="delivery-wrap">
+  <!-- Wolt -->
   <a href="https://wolt.com/en/geo/tbilisi/restaurant/sweet-labb?srsltid=AfmBOooZsP3KjfWOflKC5pnJQQSQPeLiPXeqpCekDwm6WeWer6Meib1B"
      target="_blank" rel="noopener">
     <img src="images/logos/wolt.png" alt="Order on Wolt">
+  </a>
+
+  <!-- Glovo -->
+  <a href="https://glovoapp.com/en/ge/tbilisi/stores/sweet-lab-tbi"
+     target="_blank" rel="noopener">
+    <img src="images/logos/glovo.png" alt="Order on Glovo">
+  </a>
+
+  <!-- Bolt Food -->
+  <a href="https://food.bolt.eu/en/15-tbilisi/p/125688-sweet-lab/"
+     target="_blank" rel="noopener">
+    <img src="images/logos/bolt.png" alt="Order on Bolt Food">
   </a>
 </div>
 
