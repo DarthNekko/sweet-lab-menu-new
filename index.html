@@ -4,25 +4,24 @@
 <meta charset="UTF-8">
 <title>Sweet Lab Menu</title>
 
+<!-- Poppins font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet">
+
 <style>
   body { 
-    font-family: sans-serif; 
+    font-family: 'Poppins', sans-serif; 
     text-align: center; 
     background: #fffafc; 
     margin: 0;
     padding: 0;
   }
 
-  h1 { 
-    margin-top: 20px; 
-    font-size: 28px;
-  }
-
   .order-caption {
-    font-size: 14px;
-    color: #666;
-    margin-top: 6px;
-    margin-bottom: 6px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #4a2f23;
+    margin-top: 20px;
+    margin-bottom: 10px;
   }
 
   .lang-switch { 
@@ -37,10 +36,11 @@
     cursor: pointer;
     background: white;
     font-size: 16px;
+    font-family: 'Poppins', sans-serif;
   }
 
   .lang-switch button.active {
-    font-weight: bold;
+    font-weight: 600;
     border-color: #ff7fbf;
     color: #ff7fbf;
   }
@@ -57,17 +57,17 @@
   .delivery-wrap {
     display: flex;
     justify-content: center;
-    gap: 12px;
-    margin: 0 0 18px;
+    gap: 14px;
+    margin: 0 0 20px;
   }
 
   .delivery-wrap a {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 56px;
-    height: 56px;
-    border-radius: 14px;
+    width: 68px;
+    height: 68px;
+    border-radius: 18px;
     background: #ffffff;
     border: 1px solid #eee;
     text-decoration: none;
@@ -80,8 +80,8 @@
   }
 
   .delivery-wrap img {
-    width: 32px;
-    height: 32px;
+    width: 40px;
+    height: 40px;
     object-fit: contain;
     display: block;
   }
@@ -98,9 +98,7 @@
 
 <body>
 
-<h1>Sweet Lab Menu</h1>
-
-<div class="order-caption">Order now</div>
+<div class="order-caption">Order now!</div>
 
 <div class="delivery-wrap">
   <!-- Wolt -->
